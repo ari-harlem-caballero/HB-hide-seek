@@ -25,19 +25,28 @@ function getRandomItem(arr) {
 
     return arr[index];
 }
-//note note
+
 function handleGuess(userGuess, correctSpot) {
     // should reset the styles
-
+    resetStyles();
     // then increment the guesses
-
+    totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
-
+    const winningElem 
     // then add the face class to that element so that the face shows up
-
+    // winningElem.src = './assets/'; WHERE????
     // then if the user guess is correct, increment the correct guesses
-
+    if (winningElem === '') {
+        winsEl++;
+    }
     // update the DOM to show this change to the user (including the losses, not tracked directly in state)
+    displayWinLossTotal();
+}
+
+function displayWinLossTotal() {
+    winsEl.textContent = wins;
+    lossEl.textContent = total - wins;
+    totalEl.textContent = total;
 }
 
 function resetStyles() {
@@ -46,18 +55,18 @@ function resetStyles() {
 
 shedButton.addEventListener('click', () => {
     // should get a random item to call the 'correct spot'
-
+    handleGuess('shed');
     // then use that correct spot to 'handle the guess' using the handleGuess function
 });
 
 treeButton.addEventListener('click', () => {
     // should get a random item to call the 'correct spot'
-
+    handleGuess('tree');
     // then use that correct spot to 'handle the guess' using the handleGuess function
 });
 
 boulderButton.addEventListener('click', () => {
     // should get a random item to call the 'correct spot'
-
+    handleGuess('boulder');
     // then use that correct spot to 'handle the guess' using the handleGuess function
 });
