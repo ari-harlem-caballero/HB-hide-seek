@@ -25,7 +25,7 @@ function getRandomItem(arr) {
 
     return arr[index];
 }
-
+//note note
 function handleGuess(userGuess, correctSpot) {
     // should reset the styles
 
