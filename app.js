@@ -43,6 +43,9 @@ function handleGuess(userGuess, correctSpot) {
 
 function resetStyles() {
     // should remove the face class from all containers
+    shedContainer.classList.remove('face');
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
 }
 
 shedButton.addEventListener('click', () => {
