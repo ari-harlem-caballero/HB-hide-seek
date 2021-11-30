@@ -46,7 +46,9 @@ function resetStyles() {
 
 shedButton.addEventListener('click', () => {
     // should get a random item to call the 'correct spot'
+    const randomItem = getRandomItem(hidingPlaces);
     // then use that correct spot to 'handle the guess' using the handleGuess function
+    handleGuess('shed', randomItem);
 });
 
 treeButton.addEventListener('click', () => {
