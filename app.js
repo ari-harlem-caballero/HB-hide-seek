@@ -29,10 +29,11 @@ function getRandomItem(arr) {
 
 function handleGuess(userGuess, correctSpot) {
     // should reset the styles
+    resetStyles();
     // then increment the guesses
-
+    totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
-    
+    const correctElem = document.getElementById(`${correctSpot}-container`);
     // then add the face class to that element so that the face shows up
     // winningElem.src = './assets/'; WHERE????
     // then if the user guess is correct, increment the correct guesses
